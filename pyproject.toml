@@ -1,0 +1,17 @@
+[project]
+name = "session-6"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "crawl4ai>=0.8.6",
+    "ddgs>=9.14.4",
+    "dotenv>=0.9.9",
+    "fastapi>=0.136.1",
+    "httpx>=0.28.1",
+    "jsonschema>=4.26.0",
+    "mcp>=1.27.1",
+    "pyyaml>=6.0.3",
+    "tavily>=1.1.0",
+]

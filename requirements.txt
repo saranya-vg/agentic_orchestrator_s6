@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pydantic
+openai
+tiktoken
+pyyaml
+# mcp==1.27.0
