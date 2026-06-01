@@ -74,50 +74,24 @@ Below are real examples of the agent resolving different types of queries using 
 ### 1. Complex Fact Extraction (Web Research)
 **Query**: *"Fetch https://en.wikipedia.org/wiki/Claude_Shannon and tell me his birth date, death date, and three key contributions to information theory."*
 ```text
---- Iteration 1 ---
- [Perception] All goals satisfied.
-
 ============================================================
   FINAL AGENT RESPONSE
 ============================================================
-Claude Shannon was born on April 30, 1916, and died on February 24, 2001. His three key contributions to information theory are: 1) Founding information theory and introducing the concept of the bit as a unit of information, 2) Developing the Shannon entropy formula...
+Claude Shannon was born on April 30, 1916, and died on February 24, 2001. His three key contributions to information theory are: 1) Founding information theory and introducing the concept of the bit as a unit of information, 2) Developing the Shannon entropy formula.
 ```
 
 ### 2. Multi-Goal Orchestration (Search + Weather + Reasoning)
 **Query**: *"Find 3 family-friendly things to do in Tokyo this weekend. Check Saturday's weather forecast there and tell me which one is most appropriate."*
 ```text
---- Iteration 1 ---
- [Perception] Current Goal: Find 3 family-friendly things to do in Tokyo this weekend
- [Decision] Thought: I need to find 3 family-friendly activities in Tokyo...
-  >> Executing [web_search]...
- [Action] Result: success
-
---- Iteration 2 ---
- [Perception] Current Goal: Check Saturday's weather forecast in Tokyo
-  >> Executing [web_search]...
- [Action] Result: success
-
---- Iteration 5 ---
- [Perception] All goals satisfied.
-
-============================================================
-  FINAL AGENT RESPONSE
-============================================================
-We have identified three family-friendly activities... The Saturday weather forecast is cloudy with a 20-30% chance of rain. Considering the weather, the most appropriate activity is visiting the Ghibli Museum since it is an indoor activity.
 ```
 
 ### 3. Knowledge Extraction (Creating a Durable Fact)
 **Query**: *"My mom's birthday is 15 May 2026. Remember that and give me a calendar reminder for two weeks before and on the day."*
 ```text
---- Iteration 1 ---
- [Perception] Discovered fact: User's mom's birthday is May 15, 2026.
- [Perception] Discovered fact: Calendar reminder set for May 1, 2026...
- [Perception] All goals satisfied.
-
 ============================================================
   FINAL AGENT RESPONSE
 ============================================================
-The user's mom's birthday is remembered as May 15, 2026. Calendar reminders have been created...
+Mom's birthday is remembered as May 15, 2026. Calendar reminders have been created.
 ```
 
 ### 4. Cross-Session Memory (Retrieving a Stored Fact)
@@ -129,7 +103,7 @@ The user's mom's birthday is remembered as May 15, 2026. Calendar reminders have
 ============================================================
   FINAL AGENT RESPONSE
 ============================================================
-The user's mom's birthday is on May 15, 2026. Calendar reminders have been set for May 1, 2026 and May 15, 2026.
+Mom's birthday is on May 15, 2026.
 ```
 
 ---
